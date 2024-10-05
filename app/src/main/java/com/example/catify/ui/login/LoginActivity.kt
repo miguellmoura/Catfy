@@ -27,9 +27,9 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val username = binding.username
+        val username = binding.nickname
         val password = binding.password
-        val login = binding.login
+//        val login = binding.login
         val loading = binding.loading
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
-            setResult(Activity.RESULT_OK)
+            setResult(RESULT_OK)
 
             //Complete and destroy login activity once successful
             finish()

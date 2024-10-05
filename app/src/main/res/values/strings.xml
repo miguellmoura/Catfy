@@ -1,15 +1,20 @@
 <resources>
-    <string name="app_name">Catify</string>
+<!-- login page -->
+    <string name="app_name">catfy</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="action_sign_in">Cadastre-se</string>
+    <string name="senha">Senha</string>
     <string name="action_jatemconta">Login</string>
+    <string name="action_sign_in">Cadastre-se</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Bem-vindo!"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="nickname">"Nickname"</string>
-    <string name="confirmepassword">"Confirme sua password"</string>
+    <string name="nickname">"Usuário"</string>
+    <string name="confirmpassword">"Confirme sua senha"</string>
+
+<!-- sign in page -->
+    <string name="create_account">"Crie sua conta"</string>
+    <string name="email">"E-mail"</string>
 </resources>
+
