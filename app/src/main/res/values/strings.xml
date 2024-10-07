@@ -16,5 +16,11 @@
 <!-- sign in page -->
     <string name="create_account">"Crie sua conta"</string>
     <string name="email">"E-mail"</string>
+
+<!-- main page -->
+    <string name="first_text">"Encontre diferentes tipos de gatinhos!"</string>
+    <string name="center_text">"Favorite suas preferências"</string>
+    <string name="item">Item</string>
+    <string name="main_image">main image</string>
 </resources>
 
