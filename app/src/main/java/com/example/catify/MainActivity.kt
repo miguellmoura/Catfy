@@ -53,9 +53,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.getAPI.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                val catBreed = api.getCatBreeds(100, "live_TcefF8M5RHzpZv9FkAFTSLudUjrvuDZmqIn48InB092e11xK1zETx9k41iWx1WA5", 1)
+                val cat = api.getCat(100, "live_TcefF8M5RHzpZv9FkAFTSLudUjrvuDZmqIn48InB092e11xK1zETx9k41iWx1WA5", 1)
                 runOnUiThread{
-                    binding.catInfo.text = catBreed[0].categories[0].name
+                    binding.catInfo.text = cat[0].breeds[0].name
                 }
             }
         }
