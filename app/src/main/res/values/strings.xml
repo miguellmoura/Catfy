@@ -1,5 +1,5 @@
 <resources>
-<!-- login page -->
+    <!-- login page -->
     <string name="app_name">catfy</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="senha">Senha</string>
@@ -13,7 +13,7 @@
     <string name="nickname">"Usuário"</string>
     <string name="confirmpassword">"Confirme sua senha"</string>
 
-<!-- sign in page -->
+    <!-- sign in page -->
     <string name="create_account">"Crie sua conta"</string>
     <string name="email">"E-mail"</string>
 </resources>
