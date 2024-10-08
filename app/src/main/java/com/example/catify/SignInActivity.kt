@@ -2,6 +2,7 @@ package com.example.catify
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -19,7 +20,7 @@ class SignInActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = DataBindingUtil.setContentView<ActivitySignInBinding>(this, R.layout.activity_sign_in)
+        val binding: ActivitySignInBinding = DataBindingUtil.setContentView<ActivitySignInBinding>(this, R.layout.activity_sign_in)
 
         var isAuthorizedToSignIn: Boolean = false
 
@@ -29,6 +30,8 @@ class SignInActivity: AppCompatActivity() {
         }
 
         binding.signIn.setOnClickListener {
+
+            Log.d("SignInActivity", "Botão de cadastro clicado")
 
             val username = binding.nickname.text.toString()
             val email = binding.email.text.toString()
