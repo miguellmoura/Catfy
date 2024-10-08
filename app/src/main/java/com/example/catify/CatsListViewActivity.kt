@@ -1,8 +1,10 @@
 package com.example.catify
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
@@ -54,11 +56,27 @@ class CatsListViewActivity : AppCompatActivity() {
                 }
 
                 withContext(Dispatchers.Main) {
-                    binding.recyclerView.adapter = CatAdapter()
+                    binding.recyclerView.adapter = CatAdapter(object: CatAdapter.OnItemClickListener{
+                        override fun onItemClick(view: View, position: Int) {
+//                            val intent = Intent(this@CatsListViewActivity, CatDetailActivity::class.java)
+//                            intent.putExtra("position", position)
+//                            startActivity(intent)
+
+                            Log.d("TAG", "onItemClick: $position")
+                        }
+                        override fun onItemLongClick(view: View, position: Int) {
+                            Log.d("TAG", "onItemLongClick: $position")
+
+
+                        }
+                    })
                     binding.recyclerView.addItemDecoration(DividerItemDecoration(this@CatsListViewActivity, DividerItemDecoration.VERTICAL))
                     binding.recyclerView.addItemDecoration(DividerItemDecoration(this@CatsListViewActivity, DividerItemDecoration.HORIZONTAL))
                     binding.recyclerView.layoutManager = GridLayoutManager(this@CatsListViewActivity, 2)
                 }
             }
+
+
+
     }
 }
