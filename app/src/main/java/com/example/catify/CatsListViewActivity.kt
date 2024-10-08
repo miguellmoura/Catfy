@@ -56,8 +56,9 @@ class CatsListViewActivity : AppCompatActivity() {
                 }
 
                 withContext(Dispatchers.Main) {
-                    binding.recyclerView.adapter = CatAdapter(object: CatAdapter.OnItemClickListener{
+                    binding.recyclerView.adapter = CatAdapter(object: CatAdapter.OnItemClickListener {
                         override fun onItemClick(view: View, position: Int) {
+
 //                            val intent = Intent(this@CatsListViewActivity, CatDetailActivity::class.java)
 //                            intent.putExtra("position", position)
 //                            startActivity(intent)
@@ -65,7 +66,6 @@ class CatsListViewActivity : AppCompatActivity() {
                             Log.d("TAG", "onItemClick: $position")
                         }
                         override fun onItemLongClick(view: View, position: Int) {
-                            Log.d("TAG", "onItemLongClick: $position")
 
 
                         }

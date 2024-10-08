@@ -5,9 +5,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "FavCats")
 
-data class FavCatsRoom(
+data class FavCatsRoom (
     @PrimaryKey(autoGenerate = true)
     val breeds: List<CatBreed>,
     val id: String,
-    val url: String,
+    val url: String
 )
