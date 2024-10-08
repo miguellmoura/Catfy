@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.catify.databinding.ItemViewBinding
 import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 
 class CatAdapter : RecyclerView.Adapter<CatAdapter.ViewHolder>() {
 
@@ -15,8 +16,9 @@ class CatAdapter : RecyclerView.Adapter<CatAdapter.ViewHolder>() {
 
             Picasso.get()
                 .load(cat.url)
-                .centerCrop()
                 .resize(300, 200)
+                .centerCrop()
+                .transform(RoundedCornersTransformation(14, 0))
                 .into(binding.fotoGatinhozinho)
         }
     }

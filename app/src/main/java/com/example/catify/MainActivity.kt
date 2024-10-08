@@ -15,10 +15,11 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        lateinit var binding: ActivityMainBinding
 
         val logging = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 
@@ -34,7 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         val api = retrofit.create(CatBreedAPI::class.java)
 
-        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         
         val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
@@ -51,14 +53,14 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(intent)
         }
 
-        binding.getAPI.setOnClickListener {
+        /*binding.getAPI.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 val cat = api.getCat(100, "live_TcefF8M5RHzpZv9FkAFTSLudUjrvuDZmqIn48InB092e11xK1zETx9k41iWx1WA5", 1)
                 runOnUiThread{
                     binding.catInfo.text = cat[0].breeds[0].name
                 }
             }
-        }
+        }*/
 
     }
 }

@@ -2,6 +2,7 @@ package com.example.catify
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
@@ -11,13 +12,18 @@ import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
 class CatsListViewActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityCatsListViewBinding
 
     val logging = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
@@ -37,22 +43,22 @@ class CatsListViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-            CoroutineScope(Dispatchers.IO).launch {
-                val cat = api.getCat(100, "live_TcefF8M5RHzpZv9FkAFTSLudUjrvuDZmqIn48InB092e11xK1zETx9k41iWx1WA5", 1)
+        binding = ActivityCatsListViewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-                for (cat in cat) {
+            CoroutineScope(Dispatchers.IO).launch {
+                val cats = api.getCat(100, "live_TcefF8M5RHzpZv9FkAFTSLudUjrvuDZmqIn48InB092e11xK1zETx9k41iWx1WA5", 1)
+
+                for (cat in cats) {
                     catsList.add(cat)
                 }
 
+                withContext(Dispatchers.Main) {
+                    binding.recyclerView.adapter = CatAdapter()
+                    binding.recyclerView.addItemDecoration(DividerItemDecoration(this@CatsListViewActivity, DividerItemDecoration.VERTICAL))
+                    binding.recyclerView.addItemDecoration(DividerItemDecoration(this@CatsListViewActivity, DividerItemDecoration.HORIZONTAL))
+                    binding.recyclerView.layoutManager = GridLayoutManager(this@CatsListViewActivity, 2)
+                }
             }
-
-
-
-
-        binding = DataBindingUtil.setContentView<ActivityCatsListViewBinding>(this, R.layout.activity_main)
-        binding.recyclerView.adapter = CatAdapter()
-        binding.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        binding.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL))
-        binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
     }
 }

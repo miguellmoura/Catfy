@@ -1,7 +1,9 @@
 package com.example.catify
 
-data class Cat(
+import java.io.Serializable
+
+class Cat(
     val breeds: List<CatBreed>,
     val id: String,
     val url: String,
-)
+) : Serializable
