@@ -26,11 +26,11 @@ class CatInfoActivity : AppCompatActivity() {
 
         binding.catName.text = selectedCat.name
         binding.catDescription.text = selectedCat.description
-        binding.lifeExpectations.text = selectedCat.life_span
-        binding.adaptability.text = selectedCat.adaptability.toString()
-        binding.affectionLevel.text = selectedCat.affection_level.toString()
-        binding.energyLevel.text = selectedCat.energy_level.toString()
-        binding.healthProblems.text = selectedCat.health_issues.toString()
+        binding.lifeExpectations.text = "Expectativa de vida: " + selectedCat.life_span
+        binding.adaptability.text = "Adaptabilidade: "+ selectedCat.adaptability.toString()
+        binding.affectionLevel.text = "Nível de amor: " + selectedCat.affection_level.toString()
+        binding.energyLevel.text = "Nível de energia: " + selectedCat.energy_level.toString()
+        binding.healthProblems.text = "Problemas de saúde: " + selectedCat.health_issues.toString()
 
 
         Picasso.get()
