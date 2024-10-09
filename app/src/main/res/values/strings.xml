@@ -25,5 +25,22 @@
     <string name="item">Item</string>
     <string name="main_image">main image</string>
 
+<!-- cats list view -->
+    <string name="favorites_text">"Favoritos"</string>
+
+<!-- cat info -->
+    <string name="name_logo">"catfy"</string>
+    <string name="cat_name">"Gatinha Mia"</string>
+    <string name="cat_description">"Mia's type are a lot of fun to live with, but they're definitely not the cat for everyone, or for first-time cat owners.
+        Extremely intelligent, curious and active, they demand a lot of interaction and woe betide the owner who doesn't provide it."</string>
+    <string name="life_expectations">"Expectativa de vida: 15 anos"</string>
+    <string name="adaptability">"Adaptabilidade: 5"</string>
+    <string name="affection_level">"Nível de amor: 4"</string>
+    <string name="energy_level">"Nível de energia: 5"</string>"
+    <string name="health_problems">"Problemas de saúde: 3"</string>"
+    <string name="smartness">"Inteligência: 5"</string>"
+
+
+
 </resources>
 
