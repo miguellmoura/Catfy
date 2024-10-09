@@ -20,6 +20,8 @@ class SignInActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        Singleton.setContextUser(this)
+
         val binding: ActivitySignInBinding = DataBindingUtil.setContentView<ActivitySignInBinding>(this, R.layout.activity_sign_in)
 
         var isAuthorizedToSignIn: Boolean = false
@@ -43,8 +45,12 @@ class SignInActivity: AppCompatActivity() {
                 isAuthorizedToSignIn = false
             }
             if (username.isNotEmpty() && password.isNotEmpty() && !isAuthorizedToSignIn) {
-                val user = User(email, username, password)
-                // IMPLEMENTAR AQUI O CADASTRO DO USUÁRIO NO BANCO DE DADOS
+                val user = User(null, email, username, password)
+
+                Singleton.addUser(user)
+
+                Log.d("usuarios adicionados", Singleton.userList[0].nickname)
+
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             } else {

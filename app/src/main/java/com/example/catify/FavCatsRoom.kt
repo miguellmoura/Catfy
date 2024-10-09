@@ -7,7 +7,14 @@ import androidx.room.PrimaryKey
 
 data class FavCatsRoom (
     @PrimaryKey(autoGenerate = true)
-    val breeds: List<CatBreed>,
-    val id: String,
-    val url: String
+    val id: Int,
+    val url: String,
+    val name: String,
+    val description: String,
+    val life_span: String,
+    val adaptability: Int,
+    val affection_level: Int,
+    val energy_level: Int,
+    val health_issues: Int,
+    val intelligence: Int,
 )

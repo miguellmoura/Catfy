@@ -18,7 +18,7 @@ class CatAdapter(val listener: OnItemClickListener) : RecyclerView.Adapter<CatAd
     inner class ViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(cat: Cat) {
 
-            binding.nomeGatinhozinho.text = cat.breeds[0].name
+            binding.nomeGatinhozinho.text = cat.name
 
             Picasso.get()
                 .load(cat.url)

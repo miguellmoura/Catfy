@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:backgroundTint="@color/white"
-            android:enabled="false"
+            android:enabled="true"
             android:fontFamily="sans-serif-light"
             android:text="@string/action_jatemconta"
             android:textColor="@color/black"

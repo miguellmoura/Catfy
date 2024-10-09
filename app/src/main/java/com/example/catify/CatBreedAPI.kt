@@ -10,6 +10,6 @@ interface CatBreedAPI {
         @Query("limit") limit: Int,
         @Query("api_key") apiKey: String,
         @Query("has_breeds") has_breeds: Int,
-    ): List<Cat>
+    ): List<CatResponse>
 
 }

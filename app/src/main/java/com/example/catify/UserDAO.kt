@@ -16,4 +16,8 @@ interface UserDAO {
     fun update(users : User)
     @Delete
     fun delete(users : User)
+
+    @Query("SELECT * FROM users where email = :email")
+    fun getUser(email: String): User
+
 }

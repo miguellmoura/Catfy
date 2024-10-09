@@ -1,6 +1,6 @@
 package com.example.catify
 
-data class CatBreed(
+data class CatBreedData(
     val name: String,
     val description: String,
     val life_span: String,

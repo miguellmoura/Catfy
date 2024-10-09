@@ -18,12 +18,12 @@
     <string name="email">"E-mail"</string>
 
 
-
-<!-- main page -->
+    <!-- main page -->
     <string name="first_text">"Encontre diferentes tipos de gatinhos!"</string>
     <string name="center_text">"Favorite suas preferências"</string>
     <string name="item">Item</string>
     <string name="main_image">main image</string>
+
 
 <!-- cats list view -->
     <string name="favorites_text">"Favoritos"</string>
@@ -39,7 +39,6 @@
     <string name="energy_level">"Nível de energia: 5"</string>"
     <string name="health_problems">"Problemas de saúde: 3"</string>"
     <string name="smartness">"Inteligência: 5"</string>"
-
 
 
 </resources>

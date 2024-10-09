@@ -52,16 +52,17 @@ class CatsListViewActivity : AppCompatActivity() {
                 val cats = api.getCat(100, "live_TcefF8M5RHzpZv9FkAFTSLudUjrvuDZmqIn48InB092e11xK1zETx9k41iWx1WA5", 1)
 
                 for (cat in cats) {
-                    catsList.add(cat)
+                    val catFinal = Cat(cat.id, cat.breeds[0].name, cat.url, cat.breeds[0].description, cat.breeds[0].life_span, cat.breeds[0].adaptability, cat.breeds[0].affection_level, cat.breeds[0].energy_level, cat.breeds[0].health_issues, cat.breeds[0].intelligence)
+                    catsList.add(catFinal)
                 }
 
                 withContext(Dispatchers.Main) {
                     binding.recyclerView.adapter = CatAdapter(object: CatAdapter.OnItemClickListener {
                         override fun onItemClick(view: View, position: Int) {
 
-//                            val intent = Intent(this@CatsListViewActivity, CatDetailActivity::class.java)
-//                            intent.putExtra("position", position)
-//                            startActivity(intent)
+                            val intent = Intent(this@CatsListViewActivity, CatInfoActivity::class.java)
+                            intent.putExtra("position", position)
+                            startActivity(intent)
 
                             Log.d("TAG", "onItemClick: $position")
                         }
