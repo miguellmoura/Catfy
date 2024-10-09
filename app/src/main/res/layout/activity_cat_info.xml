@@ -15,14 +15,15 @@
             android:id="@+id/border_white"
             android:layout_width="298dp"
             android:layout_height="542dp"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="72dp"
             android:background="@drawable/rounded_border_white"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
         <FrameLayout
             android:layout_width="182dp"
@@ -60,12 +61,12 @@
 
 
         <ImageView
-            android:id="@+id/icon_logo"
+            android:id="@+id/flecha_icon"
             android:layout_width="30dp"
             android:layout_height="26dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:background="@drawable/gatinho_icon"
+            android:background="@drawable/flecha_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +103,7 @@
             android:id="@+id/life_expectations"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:textColor="#D74949"
             android:textSize="10sp"
@@ -117,7 +118,7 @@
             android:id="@+id/adaptability"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
             app:layout_constraintRight_toRightOf="@id/border_white"
@@ -135,7 +136,7 @@
             android:fontFamily="@font/poppins"
             android:textColor="#D74949"
             android:textSize="10sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@id/adaptability"
             app:layout_constraintRight_toRightOf="@id/border_white"
             app:layout_constraintLeft_toLeftOf="@id/border_white" />
@@ -149,7 +150,7 @@
             android:textColor="#D74949"
             app:layout_constraintTop_toBottomOf="@id/affection_level"
             android:textSize="10sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintRight_toRightOf="@id/border_white"
             app:layout_constraintLeft_toLeftOf="@id/border_white"
              />
@@ -163,24 +164,9 @@
             app:layout_constraintLeft_toLeftOf="@id/border_white"
             android:textColor="#D74949"
             android:textSize="10sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@id/energy_level"
              />
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="20dp"
-            android:backgroundColor="#D74949"
-            android:textColor="@color/white"
-            android:text="Favoritar"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/health_problems"
-            app:layout_constraintEnd_toEndOf="@id/energy_level"
-            app:layout_constraintStart_toStartOf="@id/border_white"
-            android:background="@drawable/rounded_border_white"
-            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="@string/first_text"
-            android:textColor="#D74949"
+            android:textColor="#FFAFA2"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,8 +28,8 @@
 
         <TextView
             android:id="@+id/center_text"
-            android:layout_width="249dp"
-            android:layout_height="32dp"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="216dp"
             android:background="@drawable/rounded_border"
             android:fontFamily="@font/poppins"
@@ -37,6 +37,7 @@
             android:textColor="#FFFFFF"
             android:textSize="17sp"
             android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,16 +47,15 @@
             android:id="@+id/border"
             android:layout_width="362dp"
             android:layout_height="31dp"
-            android:layout_marginTop="608dp"
             android:background="@drawable/rounded_border"
             android:fontFamily="@font/poppins"
             android:textColor="#FFFFFF"
             android:textSize="17sp"
+            android:layout_marginBottom="1dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/first_text" />
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <ImageView
             android:id="@+id/logoApp"
@@ -76,22 +76,20 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="672dp"
             android:src="@drawable/heart_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.049"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/border"
+            />
 
         <ImageView
             android:id="@+id/home_icon"
             android:layout_width="39dp"
             android:layout_height="33dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="668dp"
             android:src="@drawable/home_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
 
         <ImageView
             android:id="@+id/user_icon"
@@ -100,10 +98,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="668dp"
             android:src="@drawable/user_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.949"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@id/border"
+            />
 
         <ImageView
             android:id="@+id/image_main"
@@ -122,14 +119,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="378dp"
-            android:layout_height="319dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/center_text"
-            app:layout_constraintHorizontal_bias="0.041"
+            android:layout_height="339dp"
+            app:layout_constraintBottom_toTopOf="@id/border"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/center_text"
-            app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/item_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

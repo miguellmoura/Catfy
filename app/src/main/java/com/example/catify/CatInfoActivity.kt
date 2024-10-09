@@ -1,5 +1,6 @@
 package com.example.catify
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.catify.databinding.ActivityCatInfoBinding
@@ -31,6 +32,11 @@ class CatInfoActivity : AppCompatActivity() {
         binding.affectionLevel.text = " * Nível de amor:  " + selectedCat.affection_level.toString()
         binding.energyLevel.text = " * Nível de energia:  " + selectedCat.energy_level.toString()
         binding.healthProblems.text = " * Problemas de saúde:  " + selectedCat.health_issues.toString()
+
+        binding.flechaIcon.setOnClickListener {
+            val intent = Intent(this, CatsListViewActivity::class.java)
+            startActivity(intent)
+        }
 
 
         Picasso.get()

@@ -1,5 +1,6 @@
 package com.example.catify
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import com.example.catify.databinding.ActivityLoginBinding
 import com.example.catify.databinding.ActivitySignInBinding
 import java.math.BigInteger
 import java.security.MessageDigest
+
 
 class SignInActivity: AppCompatActivity() {
 
@@ -52,7 +54,7 @@ class SignInActivity: AppCompatActivity() {
                 Log.d("usuarios adicionados", Singleton.userList[0].nickname)
 
                 val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
+                startActivity(intent, ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_right, R.anim.slide_out_left).toBundle())
             } else {
                 isAuthorizedToSignIn = false
                 Toast.makeText(this, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show()
