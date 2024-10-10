@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.catify.databinding.ActivityLoginBinding
 import java.math.BigInteger
 import java.security.MessageDigest
+import android.view.animation.AnimationUtils
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,9 +23,13 @@ class LoginActivity : AppCompatActivity() {
 
         val binding = DataBindingUtil.setContentView<ActivityLoginBinding>(this, R.layout.activity_login)
 
+        val fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+
+        binding.contajaexiste.startAnimation(fadeInAnimation)
+
         binding.contajaexiste.setOnClickListener {
             Log.d("LoginActivity", "Botão de cadastro clicado")
-//
+
             val email = binding.nickname.text.toString()
             val password = binding.password.text.toString().md5()
 
@@ -44,6 +49,5 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
