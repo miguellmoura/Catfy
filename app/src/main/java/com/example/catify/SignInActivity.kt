@@ -58,7 +58,7 @@ class SignInActivity : AppCompatActivity() {
                 Log.d("usuarios adicionados", Singleton.userList[0].nickname)
 
                 val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent, ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_right, R.anim.slide_out_left).toBundle())
+                startActivity(intent)
             } else {
                 isAuthorizedToSignIn = false
                 Toast.makeText(this, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show()
