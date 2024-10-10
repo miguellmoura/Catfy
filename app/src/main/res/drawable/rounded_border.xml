@@ -8,11 +8,11 @@
         android:width="2dp"
         android:color="#FFAFA2" />
 
-    <solid android:color="#D74949" />
+<!--    <solid android:color="#D74949" />-->
 
-    <stroke
-        android:width="2dp"
-        android:color="#D74949" />
+<!--    <stroke-->
+<!--        android:width="2dp"-->
+<!--        android:color="#D74949" />-->
 
 
     <corners android:radius="20dp" />
