@@ -37,7 +37,6 @@ android {
     dataBinding {
         enable = true
     }
-
     viewBinding {
         enable = true
     }
@@ -64,6 +63,7 @@ dependencies {
     implementation("com.squareup.picasso:picasso:2.71828")
     implementation("jp.wasabeef:picasso-transformations:2.4.0")
     implementation("androidx.recyclerview:recyclerview:1.3.0")
+    implementation ("androidx.databinding:databinding-runtime:7.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")

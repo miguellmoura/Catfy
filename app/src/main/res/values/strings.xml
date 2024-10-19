@@ -39,7 +39,8 @@
     <string name="affection_level">"Nível de amor: 4"</string>
     <string name="energy_level">"Nível de energia: 5"</string>"
     <string name="health_problems">"Problemas de saúde: 3"</string>"
-    <string name="smartness">"Inteligência: 5"</string>"
+    <string name="smartness">"Inteligência: 5"</string>
+    <string name="dark_mode">Dark Mode</string>"
 
 
 

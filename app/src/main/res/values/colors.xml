@@ -4,4 +4,19 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg_color">#FFAFA2</color>
     <color name="buttonTextColorCyan">#49688D</color>
+    <color name="primaryColor">#6200EE</color>
+    <color name="primaryDarkColor">#3700B3</color>
+    <color name="onPrimaryColor">#FFFFFF</color>
+    <color name="secondaryColor">#03DAC5</color>
+    <color name="onSecondaryColor">#000000</color>
+
+
+    /* night theme */
+
+    <color name="primaryColorNight">#FF0000</color>
+    <color name="primaryDarkColorNight">#00FF00</color>
+    <color name="onPrimaryColorNight">#0000FF</color>
+    <color name="secondaryColorNight">#FFFF00</color>
+    <color name="onSecondaryColorNight">#FF00FF</color>
+
 </resources>
