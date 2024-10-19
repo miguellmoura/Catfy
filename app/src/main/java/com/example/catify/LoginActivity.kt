@@ -28,6 +28,9 @@ class LoginActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
+        val daoUser = UserDatabase.getInstance(applicationContext)?.UserDAO()
+        Singleton.initialize(daoUser = daoUser!!)
+
         val container = binding.container
 
         val backgroundColor = if (isDarkMode) {
