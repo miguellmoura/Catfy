@@ -1,0 +1,50 @@
+<resources>
+    <!-- login page -->
+    <string name="app_name">catfy</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="senha">Senha</string>
+    <string name="action_jatemconta">Login</string>
+    <string name="action_sign_in">Cadastre-se</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Bem-vindo!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="nickname">"Usuário"</string>
+    <string name="confirmpassword">"Confirme sua senha"</string>
+
+    <!-- sign in page -->
+    <string name="create_account">"Crie sua conta"</string>
+    <string name="email">"E-mail"</string>
+
+
+
+    <!-- main page -->
+    <string name="first_text">"Encontre diferentes tipos de gatinhos!"</string>
+    <string name="center_text">"Segure para favoritar os que você mais gostar!"</string>
+    <string name="item">Item</string>
+    <string name="main_image">main image</string>
+
+
+<!-- cats list view -->
+    <string name="favorites_text">"Favoritos"</string>
+
+<!-- cat info -->
+    <string name="name_logo">"catfy"</string>
+    <string name="cat_name">"Gatinha Mia"</string>
+    <string name="cat_description">"Mia's type are a lot of fun to live with, but they're definitely not the cat for everyone, or for first-time cat owners.
+        Extremely intelligent, curious and active, they demand a lot of interaction and woe betide the owner who doesn't provide it."</string>
+    <string name="life_expectations">"Expectativa de vida: 15 anos"</string>
+    <string name="adaptability">"Adaptabilidade: 5"</string>
+    <string name="affection_level">"Nível de amor: 4"</string>
+    <string name="energy_level">"Nível de energia: 5"</string>"
+    <string name="health_problems">"Problemas de saúde: 3"</string>"
+    <string name="smartness">"Inteligência: 5"</string>
+    <string name="dark_mode">Dark Mode</string>"
+
+
+
+
+
+</resources>
+
