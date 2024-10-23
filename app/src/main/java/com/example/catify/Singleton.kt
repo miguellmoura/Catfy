@@ -2,6 +2,10 @@ package com.example.catify
 
 import android.content.Context
 import android.util.Log
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 object Singleton {
 
@@ -44,9 +48,22 @@ object Singleton {
         return dao.obterGatosFavoritos(id)
     }
 
-    fun deleteFavCat(favCat: FavCats) {
-        dao.delete(favCat)
-        favCatsList = dao.getAll()
+    fun deleteFavCat(position: Int) {
+        CoroutineScope(Dispatchers.IO).launch {
+
+            val catToDelete = favCatsList[position]
+            dao.delete(catToDelete)
+            val updatedFavCatsList = dao.getAll()
+
+            withContext(Dispatchers.Main) {
+                favCatsList = updatedFavCatsList
+            }
+        }
+    }
+
+    fun getFavCat(position: Int): FavCats {
+        Log.d("TESTEYARD", favCatsList.toString())
+        return favCatsList[position]
     }
 
     fun addUser(user: User) {

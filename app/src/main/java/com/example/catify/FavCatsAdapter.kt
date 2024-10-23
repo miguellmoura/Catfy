@@ -1,3 +1,4 @@
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,14 +19,12 @@ class FavCatsAdapter(private val cats: List<FavCats>, val listener: FavCatsAdapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatViewHolder {
-        // Usando o View Binding para inflar o layout do item
         val binding = ItemViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CatViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: CatViewHolder, position: Int) {
         val cat = cats[position]
-        // Ligando o dado à view usando o binding
         holder.binding.nomeGatinhozinho.text = cat.name
         Picasso.get()
             .load(cat.url)
@@ -34,14 +33,15 @@ class FavCatsAdapter(private val cats: List<FavCats>, val listener: FavCatsAdapt
             .transform(RoundedCornersTransformation(14, 0))
             .into(holder.binding.fotoGatinhozinho)
 
-//        holder.binding.root.setOnClickListener {
-//            listener.onItemClick(holder.binding.root, adapterPosition)
-//        }
-//
-//        holder.binding.root.setOnLongClickListener {
-//            listener.onItemLongClick(holder.binding.root, adapterPosition)
-//            true
-//        }
+        holder.binding.root.setOnClickListener {
+            listener.onItemClick(holder.binding.root, position)
+            true
+        }
+
+        holder.binding.root.setOnLongClickListener {
+            listener.onItemLongClick(holder.binding.root, position)
+            true
+        }
     }
 
     override fun getItemCount(): Int {
